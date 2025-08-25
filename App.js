@@ -145,6 +145,8 @@ export default function App() {
                 style={[styles.input, { width: '100%', height: 96, verticalAlign: 'top' }]}
                 placeholder='Optional description'
                 multiline={ true }
+                value={ newTodo.description ?? '' }
+                onChangeText={ (text) => setNewTodo({ ...newTodo, description: text }) }
               />
 
               <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
